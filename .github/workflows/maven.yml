@@ -32,3 +32,9 @@ jobs:
         format: table
         output: fs-report.txt
         ignore-unfixed: true
+    - name: Upload Trivy report
+      uses: actions/upload-artifact@v4
+      with:
+        name: trivy-scan-report
+        path: fs-report.json
+
